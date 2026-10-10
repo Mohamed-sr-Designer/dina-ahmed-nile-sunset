@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>أحمد & دينا — كتب الكتاب</title>
-<meta name="description" content="يسرنا دعوتكم لحفل كتب كتاب أحمد & دينا — الجمعة ١٨ ديسمبر ٢٠٢٦، الساعة ٥ عصراً، Villa Garden على النيل.">
+<meta name="description" content="يسرنا دعوتكم لحفل كتب كتاب أحمد & دينا — الجمعة ١٨ ديسمبر ٢٠٢٦، من ٥ عصراً حتى ٧ مساءً، Villa Garden على النيل.">
 <meta property="og:title" content="أحمد & دينا — دعوة كتب الكتاب">
-<meta property="og:description" content="الجمعة ١٨ ديسمبر ٢٠٢٦ · الساعة ٥ عصراً · Villa Garden">
+<meta property="og:description" content="الجمعة ١٨ ديسمبر ٢٠٢٦ · من ٥ عصراً حتى ٧ مساءً · Villa Garden">
 <meta property="og:image" content="https://mohamed-sr-designer.github.io/dina-ahmed-nile-sunset/assets/og.jpg">
 <meta property="og:url" content="https://mohamed-sr-designer.github.io/dina-ahmed-nile-sunset/">
 <meta name="twitter:card" content="summary_large_image">
@@ -99,8 +99,10 @@ a{color:inherit;text-decoration:none}
 .names .amp{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:120px}
 .hero-meta{margin-top:6px;display:flex;gap:18px;align-items:center;font-size:clamp(15px,1.8vw,19px);opacity:0;color:#f7e6c4}
 .hero-meta i{width:5px;height:5px;border-radius:50%;background:var(--gold-2)}
-.scroll-cue{position:absolute;bottom:calc(26px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);color:#f3dca2;font-size:13px;display:grid;justify-items:center;gap:8px;opacity:0}
-.scroll-cue span{width:1px;height:46px;background:linear-gradient(#f3dca2,transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
+.scroll-cue{position:absolute;bottom:calc(22px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:2px;opacity:0;cursor:pointer;
+  padding:10px 22px 6px;border-radius:999px;color:#fff3dc;font-size:17px;font-weight:700;background:rgba(28,16,6,.5);border:1px solid rgba(243,220,162,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);text-shadow:none}
+.scroll-cue svg{width:26px;height:26px;fill:none;stroke:#f3dca2;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;animation:bob .9s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(-3px)}50%{transform:translateY(5px)}}
 @keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
 
 /* ───────── STORY ───────── */
@@ -203,7 +205,15 @@ section{position:relative}
   .sunset{height:165vh}
   .count{padding:9vh 16px 10vh}
   .cd{margin-top:28px}
-  .reveal-wrap{height:118vh}
+  .reveal-wrap{height:auto}
+  .reveal{position:relative;height:64svh}
+  .reveal .img{clip-path:none!important;transform:none!important}
+  .reveal .ring{display:none}
+  .reveal .lbl{padding:40px 44px}
+  .hero-meta{font-size:16px;flex-direction:column;gap:4px}
+  .hero-meta i{display:none}
+  .gate-hint{font-size:15px}
+  .cd span{font-size:15px}
   .venue{padding-bottom:7vh}
   .where{margin-top:7vh;gap:26px}
   .where h4{font-size:38px}.where p{font-size:18px}
@@ -281,9 +291,9 @@ section{position:relative}
           <text id="n2" x="175" y="190" text-anchor="middle">دينا</text>
         </svg>
       </h1>
-      <div class="hero-meta"><span>الجمعة ١٨ ديسمبر ٢٠٢٦</span><i></i><span>الساعة ٥ عصراً</span><i></i><span>Villa Garden</span></div>
+      <div class="hero-meta"><span>الجمعة ١٨ ديسمبر ٢٠٢٦</span><i></i><span>من ٥ عصراً حتى ٧ مساءً</span><i></i><span>Villa Garden</span></div>
     </div>
-    <div class="scroll-cue"><span></span>انزل للحكاية</div>
+    <button class="scroll-cue" id="cue" aria-label="انزل للحكاية">انزل للحكاية<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
   </section>
 
   <!-- STORY -->
@@ -310,7 +320,7 @@ section{position:relative}
         <div class="day">الجمعة</div>
         <div class="big">١٨</div>
         <div class="month">ديسمبر ٢٠٢٦</div>
-        <div class="time"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>الساعة ٥ عصراً</div>
+        <div class="time"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>من ٥ عصراً حتى ٧ مساءً</div>
       </div>
       <p class="sun-note" id="sunNote">في اللحظة اللي الشمس بتسلّم فيها على النيل… تبدأ حكايتنا</p>
     </div>
@@ -454,6 +464,7 @@ $('#seal').addEventListener('click',()=>{
 });
 
 /* ── hero intro: draw the names ── */
+if(mobile){const sv=document.querySelector('.names svg');sv.setAttribute('viewBox','130 30 740 220');document.getElementById('n1').setAttribute('x','712');document.getElementById('n2').setAttribute('x','290');document.querySelector('.names').style.width='94vw';}
 function heroIn(){
   const texts=['#n1','#amp','#n2'];
   texts.forEach(id=>{const el=$(id);const L=2600;el.style.strokeDasharray=L;el.style.strokeDashoffset=L;});
@@ -465,7 +476,7 @@ function heroIn(){
     .to('#n2',{strokeDashoffset:0,duration:2.6,ease:'power2.inOut'},'-=1.2')
     .to('#n1,#amp,#n2',{fill:'url(#gfill)',strokeWidth:0,duration:1.4,ease:'power1.out'},'-=.6')
     .to('.hero-meta',{opacity:1,duration:1.1},'-=.8')
-    .to('.scroll-cue',{opacity:1,duration:1},'-=.4');
+    .to('.scroll-cue',{opacity:1,duration:.5},1.4);
   petals.burst();
 }
 gsap.set('.bism,.invite',{y:14});
@@ -558,15 +569,16 @@ function tick(){let d=Math.max(0,target-Date.now());const v={d:Math.floor(d/864e
 tick();setInterval(tick,1000);
 
 /* ── venue circle reveal ── */
-gsap.timeline({scrollTrigger:{trigger:'#revealWrap',start:'top top',end:'bottom bottom',scrub:1}})
+if(!mobile)gsap.timeline({scrollTrigger:{trigger:'#revealWrap',start:'top top',end:'bottom bottom',scrub:1}})
   .fromTo('#revImg',{clipPath:'circle(12% at 50% 50%)',scale:1.25},{clipPath:'circle(75% at 50% 50%)',scale:1,ease:'power1.inOut'},0)
   .fromTo('#revRing',{scale:1,opacity:1},{scale:8,opacity:0,ease:'power1.in'},0)
   .fromTo('#revLbl',{scale:.85},{scale:1.05,ease:'none'},0);
 
+document.getElementById('cue').addEventListener('click',()=>{const y=document.getElementById('story').offsetTop;lenis?lenis.scrollTo(y):scrollTo({top:y,behavior:'smooth'})});
 /* ── calendar ── */
-const g=new URLSearchParams({action:'TEMPLATE',text:'كتب كتاب أحمد & دينا',dates:'20261218T150000Z/20261218T190000Z',details:'يسرنا دعوتكم لحفل كتب كتاب أحمد & دينا',location:'Villa Garden — https://maps.app.goo.gl/eYoe1mGuUmShnoKu8'});
+const g=new URLSearchParams({action:'TEMPLATE',text:'كتب كتاب أحمد & دينا',dates:'20261218T150000Z/20261218T170000Z',details:'يسرنا دعوتكم لحفل كتب كتاب أحمد & دينا',location:'Villa Garden — https://maps.app.goo.gl/eYoe1mGuUmShnoKu8'});
 $('#gcal').href='https://calendar.google.com/calendar/render?'+g;
-const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//AhmedDina//AR','BEGIN:VEVENT','UID:ahmed-dina-20261218@invite','DTSTAMP:20261008T000000Z','DTSTART:20261218T150000Z','DTEND:20261218T190000Z','SUMMARY:كتب كتاب أحمد & دينا','LOCATION:Villa Garden','DESCRIPTION:https://maps.app.goo.gl/eYoe1mGuUmShnoKu8','BEGIN:VALARM','TRIGGER:-P1D','ACTION:DISPLAY','DESCRIPTION:بكرة كتب كتاب أحمد & دينا','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
+const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//AhmedDina//AR','BEGIN:VEVENT','UID:ahmed-dina-20261218@invite','DTSTAMP:20261008T000000Z','DTSTART:20261218T150000Z','DTEND:20261218T170000Z','SUMMARY:كتب كتاب أحمد & دينا','LOCATION:Villa Garden','DESCRIPTION:https://maps.app.goo.gl/eYoe1mGuUmShnoKu8','BEGIN:VALARM','TRIGGER:-P1D','ACTION:DISPLAY','DESCRIPTION:بكرة كتب كتاب أحمد & دينا','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
 $('#ics').href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));
 $('#calBtn').addEventListener('click',e=>{e.stopPropagation();const o=$('#calPop').classList.toggle('open');$('#calBtn').setAttribute('aria-expanded',o)});
 document.addEventListener('click',()=>$('#calPop').classList.remove('open'));
